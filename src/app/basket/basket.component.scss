@@ -1,0 +1,63 @@
+.basket_section {
+    display        : flex;
+    flex-direction : column;
+    width          : 50%;
+    justify-content: center;
+    margin         : auto;
+    padding        : 20px;
+
+    .check_option {
+        display: flex;
+
+        button {
+            margin          : 0 5px;
+            padding         : 10px;
+            width           : 100%;
+            background-color: #79d951;
+            border          : 0;
+            border-radius   : 2px;
+            margin-top      : 15px;
+            cursor          : pointer;
+            transition      : all 0.3s ease-in-out;
+
+            &:hover {
+                background-color: #6bc545;
+            }
+        }
+    }
+}
+
+table {
+    border-collapse: collapse;
+
+    thead {
+        th {
+            font-size  : 12px;
+            font-weight: 400;
+            border     : 1px solid black;
+            padding    : 20px;
+        }
+    }
+
+    tbody {
+        td {
+            border : 1px solid black;
+            padding: 20px;
+
+            &:nth-child(n+2) {
+                text-align: right;
+            }
+        }
+    }
+
+    tfoot {
+        td {
+            border : 1px solid black;
+            padding: 20px;
+
+            &:nth-child(n+2) {
+                text-align: right;
+            }
+        }
+    }
+}

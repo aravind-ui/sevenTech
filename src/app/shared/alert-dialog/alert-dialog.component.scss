@@ -1,0 +1,23 @@
+.alert_section {
+    padding: 10px;
+
+    .title {
+        font-size  : 20px;
+        font-weight: 200;
+    }
+
+    .content {
+        p {
+            font-size : 20px;
+            text-align: left;
+        }
+    }
+
+    .mat-dialog-actions {
+        justify-content: center;
+
+        button {
+            padding: 8px 30px;
+        }
+    }
+}

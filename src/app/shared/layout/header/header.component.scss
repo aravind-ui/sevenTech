@@ -1,0 +1,72 @@
+.header_section {
+    background-color: #79d951;
+    padding         : 15px 50px;
+    display         : flex;
+    justify-content : space-between;
+    align-items     : center;
+    position        : sticky;
+    top             : 0;
+    box-shadow   : 0 2px 2px 0 rgba(0, 0, 0, 0.25);
+
+    h3 {
+        margin: 0;
+    }
+
+    .cart_section {
+        .card_count {
+            position: relative;
+
+            img {
+                width: 30px;
+            }
+
+            .count {
+                background-color: #c54551;
+                color           : #fff;
+                border-radius   : 50%;
+                font-size       : 12px;
+                width           : 20px;
+                height          : 20px;
+                display         : flex;
+                align-items     : center;
+                justify-content : center;
+                position        : absolute;
+                top             : -3px;
+                right           : -10px;
+                box-shadow      : 0 2px 2px 0 rgb(0 0 0 / 25%);
+            }
+        }
+    }
+}
+
+table {
+    border-collapse: collapse;
+
+    thead {
+        th {
+            font-size  : 12px;
+            font-weight: 400;
+            border     : 1px solid black;
+        }
+    }
+
+    tbody {
+        td {
+            border: 1px solid black;
+
+            &:nth-child(n+2) {
+                text-align: right;
+            }
+        }
+    }
+
+    tfoot {
+        td {
+            border: 1px solid black;
+
+            &.text-center {
+                text-align: right;
+            }
+        }
+    }
+}

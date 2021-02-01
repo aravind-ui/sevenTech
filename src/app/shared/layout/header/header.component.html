@@ -1,0 +1,46 @@
+<div class="header_section">
+    <div class="logo_section">
+        <a [routerLink]="['/']"> Sample Logo </a>
+    </div>
+    <div class="cart_section">
+        <div class="card_count" [matMenuTriggerFor]="menu">
+            <img src="assets/images/cart/basket.svg" alt="card icon">
+            <span class="count"> {{itemFromCart.length}} </span>
+        </div>
+        <mat-menu #menu="matMenu">
+            <div class="card_details" *ngIf="itemFromCart && itemFromCart.length; else noCartItems">
+                <table class="table" (click)="$event.stopPropagation();">
+                    <thead>
+                        <tr>
+                            <th> Product Name </th>
+                            <th> Price per unit </th>
+                            <th> No. of Items </th>
+                            <th> Subtotal </th>
+                            <th> Action </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let cart of itemFromCart; let i= index">
+                            <td> {{cart.productName}} </td>
+                            <td class="text-right"> Rs.{{cart.unitPrice}} </td>
+                            <td class="text-right"> {{cart.noOfItems}} </td>
+                            <td class="text-right"> Rs.{{cart.unitPrice * cart.noOfItems}} </td>
+                            <td> <span (click)="removeItem(cart,i)"> Remove </span> </td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <td colspan="3"> Total</td>
+                        <td> Rs.{{subTotal}} </td>
+                        <td> </td>
+                    </tfoot>
+                </table>
+                <div class="buy_option">
+                    <button type="button" [routerLink]="['/basket']"> Buy Now </button>
+                </div>
+            </div>
+            <ng-template #noCartItems>
+                <p> No items in cart </p>
+            </ng-template>
+        </mat-menu>
+    </div>
+</div>

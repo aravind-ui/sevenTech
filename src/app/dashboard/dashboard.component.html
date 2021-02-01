@@ -1,0 +1,21 @@
+<div class="products_section">
+    <div class="products_list">
+        <div class="items">
+            <div class="product_details" *ngFor="let product of productsList; let i = index">
+                <div class="product_image">
+                    <img src="{{product.image}}" alt="product image">
+                </div>
+                <div class="product_information">
+                    <div class="header">
+                        <h4> {{product.name}} </h4>
+                        <h3> Rs.{{product.price}} </h3>
+                    </div>
+                    <p> {{product.description}} </p>
+                    <div class="buy_option">
+                        <button type="button" (click)="addToCart(product)"> Add to card </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
